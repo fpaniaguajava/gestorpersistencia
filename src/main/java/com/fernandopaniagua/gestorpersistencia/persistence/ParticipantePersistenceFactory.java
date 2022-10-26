@@ -6,7 +6,6 @@ import java.util.Properties;
 import com.fernandopaniagua.gestorpersistencia.interfaces.IParticipantePersistence;
 
 public class ParticipantePersistenceFactory {
-	
 	private static final String FICHERO_PROPERTIES = "D:\\persistenciaJAVA\\configuracion.xml";
 	private static final String PROPIEDAD_TIPO_PERSISTENCIA = "persistencia";
 	
