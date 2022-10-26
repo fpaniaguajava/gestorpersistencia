@@ -1,8 +1,9 @@
 package com.fernandopaniagua.gestorpersistencia.persistence;
 
-import java.io.FileNotFoundException;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 
@@ -10,8 +11,8 @@ import com.fernandopaniagua.gestorpersistencia.interfaces.IParticipantePersisten
 import com.fernandopaniagua.gestorpersistencia.model.Participante;
 
 public class ParticipantePersistenceObjeto implements IParticipantePersistence {
-	private static final String RUTA = "D:\\persisXtenciaJAVA\\";
-	private static final String EXTENSION = ".part";
+	private static final String RUTA = "D:\\persistenciaJAVA\\";
+	private static final String EXTENSION = ".obj";
 	
 	public void add(Participante p) throws Exception {
 		FileOutputStream fos = null;
@@ -29,15 +30,24 @@ public class ParticipantePersistenceObjeto implements IParticipantePersistence {
 			}
 		}
 	}
-	
-	
-	
-	
-	
 
-	public Participante find(Participante p) {
-		// TODO Auto-generated method stub
-		return null;
+	public Participante find(String nombre) throws Exception {
+		Participante participante;
+		FileInputStream fis = null;
+		try {
+			fis = new FileInputStream(RUTA + nombre + EXTENSION);
+			ObjectInputStream ois = new ObjectInputStream(fis);
+			participante = (Participante)ois.readObject();
+		} catch (Exception ex) {
+			throw ex;
+		} finally {
+			try {
+				if (fis!=null) fis.close();
+			} catch (IOException ex) {
+				//No hacemos nada a propósito
+			}
+		}
+		return participante;
 	}
 
 	public ArrayList<Participante> findAll() {

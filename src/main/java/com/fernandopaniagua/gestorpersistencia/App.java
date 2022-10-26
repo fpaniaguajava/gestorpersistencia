@@ -9,9 +9,15 @@ public class App {
 	public static void main(String[] args) {
 		Participante p = new Participante("Fernando","España");
 		
-		IParticipantePersistence ppf = new ParticipantePersistenceFactory().createParticipantePersistence();
 		try {
-			ppf.add(p);
+			//Versión extendida
+			//ParticipantePersistenceFactory ppf = new ParticipantePersistenceFactory();
+			//IParticipantePersistence pp = ppf.createParticipantePersistence();
+			
+			//Versión compacta
+			IParticipantePersistence pp = new ParticipantePersistenceFactory().createParticipantePersistence();
+			pp.add(p);
+			System.out.println("Participante agregado correctamente...");
 		} catch (Exception ex) {
 			System.err.println(ex.getMessage());
 		}
