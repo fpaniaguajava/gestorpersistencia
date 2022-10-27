@@ -52,8 +52,8 @@ public class ParticipantePersistenceMySQL extends PersistenciaMySQL implements I
 
 		String sql = "SELECT * from participantes";
 		Statement s = conexion.createStatement();
+		
 		ResultSet rs = s.executeQuery(sql);
-
 		while (rs.next()) {
 			Participante p = new Participante(rs.getString("nombre"), rs.getString("nacionalidad"));
 			participantes.add(p);
@@ -91,5 +91,13 @@ public class ParticipantePersistenceMySQL extends PersistenciaMySQL implements I
 		st.executeUpdate(sql);
 
 		closeConnection();
+	}
+	
+	public static void main(String[] args) {
+		try {
+			new ParticipantePersistenceMySQL().findAll();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 }
