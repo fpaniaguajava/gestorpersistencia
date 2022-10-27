@@ -4,6 +4,9 @@ import java.io.FileInputStream;
 import java.util.Properties;
 
 import com.fernandopaniagua.gestorpersistencia.interfaces.IParticipantePersistence;
+import com.fernandopaniagua.gestorpersistencia.persistence.fichero.ParticipantePersistenceFichero;
+import com.fernandopaniagua.gestorpersistencia.persistence.mysql.ParticipantePersistenceMySQL;
+import com.fernandopaniagua.gestorpersistencia.persistence.objectstream.ParticipantePersistenceObjeto;
 
 public class ParticipantePersistenceFactory {
 	private static final String FICHERO_PROPERTIES = "D:\\persistenciaJAVA\\configuracion.xml";

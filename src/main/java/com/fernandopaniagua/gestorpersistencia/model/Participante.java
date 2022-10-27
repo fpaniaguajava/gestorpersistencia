@@ -2,7 +2,7 @@ package com.fernandopaniagua.gestorpersistencia.model;
 
 import java.io.Serializable;
 
-public class Participante implements Serializable {
+public class Participante extends Object implements Serializable {
 	private String nombre;
 	private String nacionalidad;
 	
@@ -27,6 +27,11 @@ public class Participante implements Serializable {
 	}
 	public void setNacionalidad(String nacionalidad) {
 		this.nacionalidad = nacionalidad;
+	}
+	
+	@Override
+	public String toString() {
+		return String.format("Nombre:%s - Nacionalidad:%s", this.nombre, this.nacionalidad);
 	}
 }
 

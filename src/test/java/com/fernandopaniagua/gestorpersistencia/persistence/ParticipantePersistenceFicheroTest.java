@@ -7,6 +7,7 @@ import org.junit.FixMethodOrder;
 import org.junit.Test;
 
 import com.fernandopaniagua.gestorpersistencia.model.Participante;
+import com.fernandopaniagua.gestorpersistencia.persistence.fichero.ParticipantePersistenceFichero;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class ParticipantePersistenceFicheroTest {

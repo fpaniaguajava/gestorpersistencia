@@ -1,4 +1,4 @@
-package com.fernandopaniagua.gestorpersistencia.persistence;
+package com.fernandopaniagua.gestorpersistencia.persistence.objectstream;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;

@@ -8,7 +8,7 @@ public interface IParticipantePersistence {
 	//CRUD Create-Read-Update-Delete
 	public void add(Participante p) throws Exception;
 	public Participante find(String nombre) throws Exception;
-	public ArrayList<Participante> findAll();
-	public void update(Participante p);
-	public void delete(Participante p);
+	public ArrayList<Participante> findAll() throws Exception;
+	public void update(Participante p) throws Exception;
+	public void delete(Participante p) throws Exception;
 }

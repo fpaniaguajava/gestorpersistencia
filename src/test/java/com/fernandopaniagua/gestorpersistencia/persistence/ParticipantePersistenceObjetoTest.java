@@ -7,6 +7,7 @@ import org.junit.Test;
 import org.junit.runners.MethodSorters;
 
 import com.fernandopaniagua.gestorpersistencia.model.Participante;
+import com.fernandopaniagua.gestorpersistencia.persistence.objectstream.ParticipantePersistenceObjeto;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class ParticipantePersistenceObjetoTest {

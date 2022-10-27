@@ -1,4 +1,4 @@
-package com.fernandopaniagua.gestorpersistencia.persistence;
+package com.fernandopaniagua.gestorpersistencia.persistence.fichero;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
