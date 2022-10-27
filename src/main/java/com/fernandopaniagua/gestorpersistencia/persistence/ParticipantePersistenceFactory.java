@@ -27,6 +27,8 @@ public class ParticipantePersistenceFactory {
 				return new ParticipantePersistenceFichero();
 			case PERSISTENCIA_OBJETOS:
 				return new ParticipantePersistenceObjeto();
+			case PERSISTENCIA_MYSQL:
+				return new ParticipantePersistenceMySQL();
 			default: 
 				return new ParticipantePersistenceFichero();
 		}

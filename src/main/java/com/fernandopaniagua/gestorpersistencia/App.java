@@ -7,7 +7,7 @@ import com.fernandopaniagua.gestorpersistencia.persistence.ParticipantePersisten
 public class App {
 
 	public static void main(String[] args) {
-		Participante p = new Participante("Fernando","España");
+		Participante p = new Participante("Miguel","Brasil");
 		
 		try {
 			//Versión extendida
