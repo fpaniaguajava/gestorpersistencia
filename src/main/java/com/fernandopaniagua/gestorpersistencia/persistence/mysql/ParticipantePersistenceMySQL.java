@@ -64,6 +64,13 @@ public class ParticipantePersistenceMySQL extends PersistenciaMySQL implements I
 		closeConnection();
 		return participantes;
 	}
+	
+	/*
+	 * TODO Implementar esta funcionalidad
+	public ArrayList<Participante> findByNacionalidad(String nacionalidad) throws Exception {
+		
+	}
+	*/
 
 	public void update(Participante p) throws Exception {
 		setConnection();
@@ -84,6 +91,5 @@ public class ParticipantePersistenceMySQL extends PersistenciaMySQL implements I
 		st.executeUpdate(sql);
 
 		closeConnection();
-
 	}
 }
